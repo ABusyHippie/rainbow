@@ -1,3 +1,4 @@
+import lang from 'i18n-js';
 import React, { createContext, useCallback, useContext, useMemo } from 'react';
 import { ColumnWithMargins } from '../layout';
 import AvatarCircle from '../profile/AvatarCircle';
@@ -192,7 +193,7 @@ export function Header() {
         <SheetActionButtonRow ignorePaddingBottom>
           <SheetActionButton
             color={color}
-            label=" 􀜖 Add"
+            label={` 􀜖 ${lang.t('button.add')}`}
             onPress={onAddToContact}
             size="big"
             textColor={colors.whiteLabel}
@@ -201,7 +202,7 @@ export function Header() {
           {!isReadOnlyWallet && (
             <SheetActionButton
               color={color}
-              label=" 􀈠 Send"
+              label={` 􀈠 ${lang.t('button.send')}`}
               onPress={onSend}
               size="big"
               textColor={colors.whiteLabel}
@@ -213,7 +214,7 @@ export function Header() {
         <SheetActionButtonRow ignorePaddingBottom>
           <SheetActionButton
             color={colors.blueGreyDark30}
-            label="􀨭 Watch this Wallet"
+            label={`􀨭 ${lang.t('button.watch_this_wallet')}`}
             onPress={onWatchAddress}
             size="big"
             textColor={colors.whiteLabel}
